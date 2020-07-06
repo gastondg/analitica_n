@@ -1,0 +1,24 @@
+﻿COD_METRICA,METRICA,DECIL,DEFINICION,UNIDAD_MEDIDA,CONFUSION_MATRIX,MEDICION_METRICAS,UMBRALES
+Precision5,Precision,5,Precision_at_5,Numerico,False,"97,98,99,100,101,102,103,104,105,106,190",1
+Precision10,Precision,10,Precision_at_10,Numerico,False,"107,108,109,110,111,112,113,114,115,116,191",2
+Precision25,Precision,25,Precision_at_25,Numerico,False,"117,118,119,120,121,122,123,124,125,126,192",3
+NDCG5,NDCG,5,NDCG_at_5,Numerico,False,"127,128,129,130,131,132,133,134,135,136,187",4
+NDCG10,NDCG,10,NDCG_at_10,Numerico,False,"137,138,139,140,141,142,143,144,145,146,188",5
+NDCG25,NDCG,25,NDCG_at_25,Numerico,False,"147,148,149,150,151,152,153,154,155,156,189",6
+Mean_Reciprocal_Rank,Mean_Reciprocal_Rank,,Mean_Reciprocal_Rank,Numerico,False,"157,158,159,160,161,162,163,164,165,166,186",7
+Coverage,Coverage,,Coverage,Numerico,False,"25,37,59,93,92,89,90,87,91,88,185",13
+Gain1,Gain,1,Ganancia en el primer 1% ,Porcentaje,False,"27,28,29,66,77,79,78","8,15,27"
+Gain5,Gain,5,Ganancia en el primer 5%,Porcentaje,False,,
+Gain10,Gain,10,Ganancia en el primer 10% ,Porcentaje,False,,"14,16,17"
+Gain20,Gain,20,Ganancia en el primer 20% ,Porcentaje,False,"170,171,193","18,19,32,33"
+TP,TP,,True Positives,Numerico,True,,
+FP,FP,,False Positives,Numerico,True,,
+TN,TN,,True Negatives,Numerico,True,,
+FN,FN,,False Negatives,Numerico,True,,
+Threshold,Threshold,,Limite aplicado para Confusion Matrix,Numerico,True,,
+KS20,KS,20,Kolmogorov-Smirnov hasta 2 decil,Numerico,False,"69,73,169,172,194","12,24,34"
+F1,F1,,F1-Score,Numerico,False,72,25
+Precision,Precision,,Precision,Numerico,False,70,23
+Recall,Recall,,Recall,Numerico,False,71,26
+Gain30,Gain,30,Ganancia en el primer 30%,Porcentaje,False,"74,168","28,30"
+KS30,KS,30,Kolmogorov-Smirnov hasta 3 decil,Numerico,False,"75,167","29,31"

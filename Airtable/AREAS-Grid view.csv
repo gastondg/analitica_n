@@ -1,0 +1,19 @@
+﻿ID_AREA,TRIBU,SQUAD,ID_AREAA,MODELOS
+1 - Visión Cliente - Originación,Visión Cliente,Originación,1,fraudeoriginacion
+2 - Servicing - Mora,Servicing,Mora,2,fraudeoriginacion
+3 - Visión Cliente - Estrategia,Visión Cliente,Estrategia,3,
+4 - Productos - Cross,Productos,Cross,4,
+5 - Servicing - Migración,Servicing,Migración,5,
+6 - Servicing - Fraude,Servicing,Fraude,6,fraudetransaccional
+7 - Promociones - Promociones,Promociones,Promociones,7,recomendacionpromociones
+8 - Cross - Cross,Cross,Cross,8,
+9 - Cross - Consumo,Cross,Consumo,9,inactividadfinanciera
+10 - Visión Cliente - Consumo,Visión Cliente,Consumo,10,"noactivacion,rfm"
+11 - Productos - Prestamo y Suscripciones,Productos,Prestamo y Suscripciones,11,propensionbajasrevistas
+12 - Productos - Seguro,Productos,Seguro,12,propensionbajasegurosapcg
+13 - Servicing - Pago Físico,Servicing,Pago Físico,13,
+14 - Comercios - Comercios,Comercios,Comercios,14,inactividadcomercios
+15 - Productos - Tienda,Productos,Tienda,15,
+16 - Productos/Nx - Nx - Npos,Productos/Nx,Nx - Npos,16,
+17 - Plataforma Digital - Plataforma Digital,Plataforma Digital,Plataforma Digital,17,
+18 - Marketing - Marketing,Marketing,Marketing,18,
