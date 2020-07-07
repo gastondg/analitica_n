@@ -1,5 +1,0 @@
-﻿ID_ORIGEN,ESQUEMA,TABLA,MODELO
-1,DWH,DIM_CLIENTES,fraudeoriginacion
-2,BIG QUERY,BIG QUERY,fraudeoriginacion
-3,DWH,DIM_CLIENTES,fraudetransaccional
-4,,,
