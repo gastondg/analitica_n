@@ -30,7 +30,7 @@ def get_csv_header(base):
     Recibe el nombre de la base de datos de AIRTABLE
     Devuelve la cabecera del csv para la base de AIRTABLE
     """
-    bases_headers = {"AREAS": ["id", "createdTime", "ID", "TRIBU", "SQUAD", "ID_AREA", "MODELOS"],
+    bases_headers = {"AREAS": ["id_row", "createdTime", "ID", "TRIBU", "SQUAD", "ID_AREA", "MODELOS"],
                      "DEFINICION_METRICAS": ["id_row",
                                              "createdTime",
                                              "DEFINICION",
