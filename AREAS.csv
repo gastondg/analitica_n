@@ -1,20 +1,20 @@
-id;createdTime;ID;TRIBU;SQUAD;ID_AREA;MODELOS
-rec6uepF6bq6HMxPz;2020-06-21T16:20:35.000Z;15;Productos;Tienda;15 - Productos - Tienda;
-recEfrWrvrd4BBgPh;2020-06-21T16:20:35.000Z;1;Visión Cliente;Originación;1 - Visión Cliente - Originación;['recrisgF5hqZ4NFRV']
-recFxph8AwaSGyufP;2020-06-21T16:20:35.000Z;5;Servicing;Migración;5 - Servicing - Migración;
-recIVPqLlqetZb8aW;2020-06-21T16:20:35.000Z;12;Productos;Seguro;12 - Productos - Seguro;['recNErAHoNJWIdKcb']
-recMAkmhsfjaxujZL;2020-06-21T16:20:35.000Z;8;Cross;Cross;8 - Cross - Cross;
-recMsyWDDgYPjGoNq;2020-06-21T16:20:35.000Z;4;Productos;Cross;4 - Productos - Cross;
-recN1Dy1MtT6Fsttj;2020-06-26T20:58:43.000Z;21;;;21 -  - ;
-recSVGYAoOPddYJ5S;2020-06-21T16:20:35.000Z;18;Marketing;Marketing;18 - Marketing - Marketing;
-recSozyHzFC0uSesx;2020-06-21T16:20:35.000Z;11;Productos;Prestamo y Suscripciones;11 - Productos - Prestamo y Suscripciones;['rectvYjSSnda2KzFN']
-recWbFxxrHl0e9Qqk;2020-06-21T16:20:35.000Z;16;Productos/Nx;Nx - Npos;16 - Productos/Nx - Nx - Npos;
-recWm8D30ZZem667v;2020-06-21T16:20:35.000Z;17;Plataforma Digital;Plataforma Digital;17 - Plataforma Digital - Plataforma Digital;
-recYcAt430xOhy4Lf;2020-06-21T16:20:35.000Z;3;Visión Cliente;Estrategia;3 - Visión Cliente - Estrategia;
-reca25IJyhmeRetDM;2020-06-21T16:20:35.000Z;9;Cross;Consumo;9 - Cross - Consumo;['recbEnhKV5KdOgEoR']
-recb7J8Hn9ORri7VQ;2020-06-21T16:20:35.000Z;10;Visión Cliente;Consumo;10 - Visión Cliente - Consumo;['recryuNZFVbtSk92K', 'recHaY4R3SKiJHHE8']
-reckwQ1dzQuqzGfBr;2020-06-21T16:20:35.000Z;13;Servicing;Pago Físico;13 - Servicing - Pago Físico;
-recpFnRLPlDsEHJx1;2020-06-21T16:20:35.000Z;2;Servicing;Mora;2 - Servicing - Mora;['recrisgF5hqZ4NFRV']
-recqYmc71rVJPRek4;2020-06-21T16:20:35.000Z;14;Comercios;Comercios;14 - Comercios - Comercios;['recCaJi63VbcehIQa']
-rect3b6aTT0rPgexU;2020-06-21T16:20:35.000Z;6;Servicing;Fraude;6 - Servicing - Fraude;['recxgMb2Sqk07eRs5']
-recvaIaMOn2uR6NXR;2020-06-21T16:20:35.000Z;7;Promociones;Promociones;7 - Promociones - Promociones;['recSEwrC2O3ovnA5X']
+"id";"createdTime";"ID";"TRIBU";"SQUAD";"ID_AREA";"MODELOS"
+"rec6uepF6bq6HMxPz";"2020-06-21T16:20:35.000Z";15;"Productos";"Tienda";"15 - Productos - Tienda";""
+"recEfrWrvrd4BBgPh";"2020-06-21T16:20:35.000Z";1;"Visión Cliente";"Originación";"1 - Visión Cliente - Originación";"['recrisgF5hqZ4NFRV']"
+"recFxph8AwaSGyufP";"2020-06-21T16:20:35.000Z";5;"Servicing";"Migración";"5 - Servicing - Migración";""
+"recIVPqLlqetZb8aW";"2020-06-21T16:20:35.000Z";12;"Productos";"Seguro";"12 - Productos - Seguro";"['recNErAHoNJWIdKcb']"
+"recMAkmhsfjaxujZL";"2020-06-21T16:20:35.000Z";8;"Cross";"Cross";"8 - Cross - Cross";""
+"recMsyWDDgYPjGoNq";"2020-06-21T16:20:35.000Z";4;"Productos";"Cross";"4 - Productos - Cross";""
+"recN1Dy1MtT6Fsttj";"2020-06-26T20:58:43.000Z";21;"";"";"21 -  - ";""
+"recSVGYAoOPddYJ5S";"2020-06-21T16:20:35.000Z";18;"Marketing";"Marketing";"18 - Marketing - Marketing";""
+"recSozyHzFC0uSesx";"2020-06-21T16:20:35.000Z";11;"Productos";"Prestamo y Suscripciones";"11 - Productos - Prestamo y Suscripciones";"['rectvYjSSnda2KzFN']"
+"recWbFxxrHl0e9Qqk";"2020-06-21T16:20:35.000Z";16;"Productos/Nx";"Nx - Npos";"16 - Productos/Nx - Nx - Npos";""
+"recWm8D30ZZem667v";"2020-06-21T16:20:35.000Z";17;"Plataforma Digital";"Plataforma Digital";"17 - Plataforma Digital - Plataforma Digital";""
+"recYcAt430xOhy4Lf";"2020-06-21T16:20:35.000Z";3;"Visión Cliente";"Estrategia";"3 - Visión Cliente - Estrategia";""
+"reca25IJyhmeRetDM";"2020-06-21T16:20:35.000Z";9;"Cross";"Consumo";"9 - Cross - Consumo";"['recbEnhKV5KdOgEoR']"
+"recb7J8Hn9ORri7VQ";"2020-06-21T16:20:35.000Z";10;"Visión Cliente";"Consumo";"10 - Visión Cliente - Consumo";"['recryuNZFVbtSk92K', 'recHaY4R3SKiJHHE8']"
+"reckwQ1dzQuqzGfBr";"2020-06-21T16:20:35.000Z";13;"Servicing";"Pago Físico";"13 - Servicing - Pago Físico";""
+"recpFnRLPlDsEHJx1";"2020-06-21T16:20:35.000Z";2;"Servicing";"Mora";"2 - Servicing - Mora";"['recrisgF5hqZ4NFRV']"
+"recqYmc71rVJPRek4";"2020-06-21T16:20:35.000Z";14;"Comercios";"Comercios";"14 - Comercios - Comercios";"['recCaJi63VbcehIQa']"
+"rect3b6aTT0rPgexU";"2020-06-21T16:20:35.000Z";6;"Servicing";"Fraude";"6 - Servicing - Fraude";"['recxgMb2Sqk07eRs5']"
+"recvaIaMOn2uR6NXR";"2020-06-21T16:20:35.000Z";7;"Promociones";"Promociones";"7 - Promociones - Promociones";"['recSEwrC2O3ovnA5X']"

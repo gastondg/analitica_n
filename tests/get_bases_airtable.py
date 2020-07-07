@@ -1,7 +1,8 @@
 import requests
 import json
 import csv
-from pprint import pprint
+import boto3
+#from pprint import pprint
 
 
 def get_all_records(url_base, headers):
@@ -30,7 +31,7 @@ def get_csv_header(base):
     Devuelve la cabecera del csv para la base de AIRTABLE
     """
     bases_headers = {"AREAS": ["id", "createdTime", "ID", "TRIBU", "SQUAD", "ID_AREA", "MODELOS"],
-                     "DEFINICION_METRICAS": ["id",
+                     "DEFINICION_METRICAS": ["id_row",
                                              "createdTime",
                                              "DEFINICION",
                                              "UNIDAD_MEDIDA",
@@ -40,7 +41,7 @@ def get_csv_header(base):
                                              "MEDICION_METRICAS",
                                              "UMBRALES",
                                              "DECIL"],
-                     "MEDICION_METRICAS": ["id",
+                     "MEDICION_METRICAS": ["id_row",
                                            "createdTime",
                                            "ID_MEDICION",
                                            "CODIGO_MODELO",
@@ -48,7 +49,7 @@ def get_csv_header(base):
                                            "VALOR",
                                            "FECHA_MEDICION",
                                            "TIPO_CARGA"],
-                     "MODELOS": ["id",
+                     "MODELOS": ["id_row",
                                  "createdTime",
                                  "COD_MODELO",
                                  "NOMBRE_MODELO",
@@ -75,8 +76,8 @@ def get_csv_header(base):
                                  "ANEXOS",
                                  "ORIGENES",
                                  "VERSIONES"],
-                     "ORIGENES": ["id", "createdTime", "ESQUEMA", "TABLA", "ID_ORIGEN", "MODELO"],
-                     "UMBRALES": ["id",
+                     "ORIGENES": ["id_row", "createdTime", "ESQUEMA", "TABLA", "ID_ORIGEN", "MODELO"],
+                     "UMBRALES": ["id_row",
                                   "createdTime",
                                   "ID_UMBRAL",
                                   "COD_METRICA",
@@ -84,7 +85,7 @@ def get_csv_header(base):
                                   "UMBRAL",
                                   "INTERPRETACION",
                                   "FECHA_ALTA"],
-                     "VERSIONES": ["id",
+                     "VERSIONES": ["id_row",
                                    "createdTime",
                                    "ID_VERSION",
                                    "MODELO",
@@ -105,6 +106,9 @@ def limpiar_string(data_cruda):
     clean_string = clean_string.replace("\t", "    ")
     # Quito puntos y comas también
     clean_string = clean_string.replace(";", ",")
+    # Quito comillas dobles por simples
+    clean_string = clean_string.replace('"', "'")
+
     return clean_string
 
 
@@ -121,10 +125,12 @@ def json_2_csv(base, records):
     # Obtengo cabecera del csv para la base
     csv_header = get_csv_header(base)
     # Defino el output_file
-    output_file = f"{base}.csv"
+    output_file = f"/tmp/{base}.csv"
+    #output_file = f"{base}.csv"
     # Genero objetos para escribir con lib csv
-    data_to_file = open(output_file, 'w', newline='')
-    csv_writer = csv.writer(data_to_file, delimiter=";")
+    data_to_file = open(output_file, 'w', newline='', encoding="utf-8")
+    csv_writer = csv.writer(data_to_file, delimiter=";",
+                            quotechar='"', quoting=csv.QUOTE_NONNUMERIC)
     # Escribo cabecera
     rows = []
     rows.append(csv_header)
@@ -133,7 +139,9 @@ def json_2_csv(base, records):
         row = []
         # Escribe cada key del registro
         for key in csv_header:
-            if key == "id" or key == "createdTime":
+            if key == "id_row" or key == "id":
+                row.append(record["id"])
+            elif key == "createdTime":
                 row.append(record[key])
             else:
                 # Existe la clave en el registro?
@@ -147,8 +155,7 @@ def json_2_csv(base, records):
                     elif isinstance(data_cruda, str):
                         row.append(limpiar_string(data_cruda))
                     else:
-                        # No es lista ni string
-                        # Suele ser un numero
+                        # No es lista ni string suele ser un numero
                         row.append(data_cruda)
                 else:
                     # No existe en la clave en el registro, es vacío
@@ -156,17 +163,36 @@ def json_2_csv(base, records):
         # Terminó el registro
         rows.append(row)
     csv_writer.writerows(rows)
+    print(f"Impreso csv en: {output_file}")
     return output_file
+
+def send_2_s3(s3, tmp_csv):
+    """
+    Manda los csv en temp a S3
+    s3: objeto boto3
+    csv_name: string, ej: '/tmp/filename.csv'
+
+    referencia: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html#S3.Client.upload_file
+    """
+    csv_name = tmp_csv.split("/")[-1]  # filename.csv
+    s3.meta.client.upload_file(tmp_csv, 'mybucket', csv_name)
+    return 
+
 
 
 def run(url,headers,bases_airtable):
-    
+    """
+    Corre el proceso de obtener base por base todos los registros
+    Obtiene todos los registros, transforma de json a csv
+    El csv lo guarda en una temp y de ahí la envía a S3
+    """
+    # s3 = boto3.resource('s3')
     for base in bases_airtable:
         url_base = url.format(base)
         # Get records
         records = get_all_records(url_base, headers)
         csv = json_2_csv(base, records)
-        print("Impreso csv: " + csv)
+        send_2_s3(s3,csv)
     return
 
 
