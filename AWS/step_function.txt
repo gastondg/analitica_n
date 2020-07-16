@@ -1,0 +1,33 @@
+{
+  "Comment": "Ingesta de modelos desde Airtable hacia Aurora",
+  "StartAt": "Fetch Airtable Measures",
+  "States": {
+    "Fetch Airtable Measures": {
+  "Type": "Task",
+  "Resource": "arn:aws:states:::lambda:invoke",
+  "Parameters": {
+    "FunctionName": "arn:aws:lambda:us-east-1:099394068744:function:Modelos_Fetch_Airtable",
+    "Payload": {
+      "Input.$": "$"
+    }
+  },
+  "Next": "Wait a bit"
+},
+    "Wait a bit": {
+  "Type": "Wait",
+  "Seconds": 30,
+  "Next": "Copy to Aurora"
+},
+    "Copy to Aurora": {
+  "Type": "Task",
+  "Resource": "arn:aws:states:::lambda:invoke",
+  "Parameters": {
+    "FunctionName": "arn:aws:lambda:us-east-1:099394068744:function:modelos_insert_aurora",
+    "Payload": {
+      "Input.$": "$"
+    }
+  },
+  "End": true
+}
+    }
+  }
