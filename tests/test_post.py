@@ -3,6 +3,16 @@ import json
 from pprint import pprint
 import urllib
 from datetime import datetime
+import boto3
+
+root_param = '/env/modelos_analitica/'
+
+#Parameters
+def get_param(param):
+    ssm = boto3.client('ssm')
+    parameter = ssm.get_parameter(Name=root_param +param, WithDecryption=False)
+    value = parameter.get("Parameter").get("Value")
+    return(value)
 
 
 def get_data_ready_2_insert(id_modelo, id_metrica, valores):
